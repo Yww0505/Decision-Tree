@@ -1,0 +1,350 @@
+// This dataset is used to predict the quality of red wine based on various physicochemical properties.
+
+
+// The number of features:
+20
+
+
+fixedAcidityGt47 - T F
+
+volatileAcidityGt17 - T F
+volatileAcidityGt29 - T F
+
+citricAcidGt30 - T F
+
+residualSugarGtMean - T F
+
+chloridesGt9 - T F
+
+freeSulfurDioxideGtMean - T F
+
+totalSulfurDioxideGt27 - T F
+totalSulfurDioxideGt37 - T F
+totalSulfurDioxideGt54 - T F
+
+densityGt18 - T F
+densityGt41 - T F
+
+pHGtMean - T F
+
+sulphatesGt12 - T F
+sulphatesGt15 - T F
+sulphatesGt19 - T F
+sulphatesGt44 - T F
+
+alcoholGt22 - T F
+alcoholGt33 - T F
+alcoholGt47 - T F
+
+// The original class label was a rating of the wine on a scale from 0-10. In this dataset, ratings  
+// from 0-5 are combined into "lowToMid" and ratings from 6-10 are combined into "midToHigh".
+// Assume that for CS 540 HWs, only two values are possible for the class label.
+lowToMid
+midToHigh
+
+// The number of examples (will read this many in; ok to have more in the file)
+298
+
+// The examples (as mentioned above, we assume, for simplicity, that all features are BOOLEAN-VALUED, 
+// *though the names of the two values might differ across datasets*)
+
+
+
+testEx1 lowToMid F T F T F F F F F F T T F T T T F T F F
+testEx2 lowToMid F T T F F T F F F F T T T T F F F F F F
+testEx3 midToHigh F T T F F T F F F F T T T T T T F T F F
+testEx4 lowToMid F T T F F T T T T F T T F F F F F T F F
+testEx5 midToHigh F T F F F F T F F F T F T T F F F T T T
+testEx6 lowToMid F T T F F T T T T F T T F F F F F T F F
+testEx7 lowToMid F T T F T T T T T F T T T T T T T F F F
+testEx8 lowToMid F F F F F F T T T F T F T F F F F F F F
+testEx9 lowToMid F T T T F T F F F F T T F T T T T F F F
+testEx10 midToHigh T T T T T T F F F F T T F T T T F T T T
+testEx11 midToHigh F T T F F F F F F F T F T F F F F T T T
+testEx12 lowToMid F T T T F T F F F F T T T T T T F F F F
+testEx13 lowToMid F T T F F T T T F F T F T T F F F T F F
+testEx14 midToHigh F F F T F T T F F F T T T T T F F F F F
+testEx15 lowToMid T T F T T T F F F F T T F T T F F T F F
+testEx16 midToHigh F T T F F T T F F F T T T T T T F T T T
+testEx17 lowToMid F T F F F T F F F F T T T T T F F F F F
+testEx18 lowToMid F T F F F T F F F F T T F T F F F F F F
+testEx19 lowToMid F T F F T T F F F F T T T F F F F T T F
+testEx20 midToHigh F F F T F F F F F F T F F F F F F T T T
+testEx21 lowToMid F T T F F T F F F F T T T T T T F T F F
+testEx22 lowToMid F T T F F F F F F F T F T F F F F T T F
+testEx23 midToHigh F T F T T F F F F F T F T T T T F T T T
+testEx24 midToHigh T T T T T T F F F F T T F T T T F T T T
+testEx25 lowToMid F T F T T T T T T F T T F T T F F F F F
+testEx26 lowToMid F T T T F T F F F F T T T T F F F T F F
+testEx27 lowToMid F T F T T T F F F F T T F T F F F F F F
+testEx28 midToHigh F T F F F F T T F F F F T T T T F T T T
+testEx29 midToHigh F T F F T T F F F F T T F T F F F T F F
+testEx30 lowToMid T F F T T T F F F F T T F T T F F F F F
+testEx31 lowToMid F T T F F T F F F F T T T F F F F F F F
+testEx32 lowToMid F T T F F T F F F F T T T T T F F F F F
+testEx33 lowToMid F T T F F T F F F F T F T F F F F T F F
+testEx34 midToHigh F T T F F F F F F F F F T T F F F T T T
+testEx35 lowToMid F T T F F T F F F F T T F F F F F F F F
+testEx36 midToHigh F F F T F F F F F F T F T T T T F T T T
+testEx37 midToHigh F T T F T F T T T F T T F T F F F F F F
+testEx38 midToHigh F T F T F T F F F F T F T F F F F T T T
+testEx39 lowToMid F T T F F T F F F F T T F F F F F F F F
+testEx40 midToHigh F T F T F T F F F F T T F T T F F F F F
+testEx41 midToHigh T F F T F T T F F F T T F T F F F F F F
+testEx42 midToHigh F T T F F T T T F F T T T T T F F F F F
+testEx43 lowToMid F F F T F F F F F F T F F T F F F T T F
+testEx44 midToHigh F T T F F T T F F F T F T T T F F T T F
+testEx45 midToHigh F T T F F F F F F F F F T T F F F T T T
+testEx46 midToHigh F F F T F T F F F F T F F T T F F T T T
+testEx47 midToHigh T T T T T T F F F F T T F T T T F T T F
+testEx48 lowToMid F T T F F T F F F F T F T F F F F T T F
+testEx49 midToHigh F T F T F F F F F F T F F T T F F T T T
+testEx50 midToHigh F T T T T T F F F F T T F T T T F T F F
+testEx51 lowToMid F T T F T T T T T F T T F T T T F F F F
+testEx52 midToHigh F F F T T T F F F F T T F T T T F T T T
+testEx53 midToHigh F F F T T F F F F F T T T T T T F T T T
+testEx54 lowToMid F T F F F F T T F F T F T T T F F T T T
+testEx55 lowToMid F T F F F F F F F F T F T T F F F T T F
+testEx56 lowToMid F T T F T T T T T F T T F T T F F F F F
+testEx57 lowToMid F T T F F F F F F F T F T T T T F T T F
+testEx58 lowToMid F T T F F T F F F F T F T F F F F T T F
+testEx59 lowToMid F T T F F T T F F F T T T T F F F F F F
+testEx60 midToHigh F T F T F T T F F F T T F T T T F T F F
+testEx61 lowToMid F T T F F T F F F F T T F T F F F F F F
+testEx62 lowToMid F T T F F F T F F F T F F T F F F F F F
+testEx63 midToHigh F T F F F T F F F F T T T T F F F T F F
+testEx64 lowToMid F T T T F T T T T F T T F T T T F F F F
+testEx65 midToHigh T F F T F F F F F F T T T T T T F T T F
+testEx66 lowToMid F T F T F T T F F F T T T F F F F F F F
+testEx67 lowToMid F T T F F T T T F F T T T T T F F F F F
+testEx68 midToHigh F T T F F T T F F F T F T T T F F T T T
+testEx69 lowToMid F T T F F T T F F F T T T T T T F F F F
+testEx70 midToHigh T F F T T T T F F F T T F T T T F T F F
+testEx71 lowToMid F T T T T T T T F F T T F T F F F F F F
+testEx72 midToHigh F F F T F T T F F F T T F T T T F T T F
+testEx73 lowToMid F F F T T T T F F F T T F F F F F F F F
+testEx74 midToHigh F F F T F T F F F F T F T T T T F T T T
+testEx75 midToHigh F F F T F F F F F F T F F T T F F T T F
+testEx76 lowToMid F T T F F T T T F F T T F F F F F T F F
+testEx77 midToHigh F T T F F T F F F F T T T T T F F F F F
+testEx78 lowToMid F T T F F T T F F F T T F T T T F F F F
+testEx79 lowToMid F T T F F T F F F F T T T T F F F T T F
+testEx80 lowToMid F T T F F T T F F F T T F T F F F F F F
+testEx81 lowToMid F T T F F F T F F F T T F T F F F F F F
+testEx82 midToHigh F T T F F T F F F F T T F T T T F F F F
+testEx83 midToHigh T T F T F F F F F F T T F T T T F T T F
+testEx84 midToHigh F F F T F T T F F F T F T T T T F T T F
+testEx85 lowToMid F T T F F F T F F F T T T F F F F F F F
+testEx86 midToHigh F T F T T T F F F F T T T T T T F T F F
+testEx87 lowToMid F T F T F T F F F F T T F F F F F F F F
+testEx88 midToHigh T T F T T T F F F F T T F T T T F T T T
+testEx89 lowToMid F T T F T T T F F F T F F F F F F F F F
+testEx90 midToHigh F T F F F T F F F F T T F T T F F F F F
+testEx91 lowToMid F T F F F T F F F F T F T T F F F T T F
+testEx92 midToHigh F T F T T F F F F F T T T T T T F T T F
+testEx93 lowToMid T T F T T T T F F F T T F T F F F F F F
+testEx94 midToHigh F T T F F F F F F F T T T T F F F F F F
+testEx95 midToHigh F T T F F T F F F F T T T T T F F T T F
+testEx96 lowToMid F T T F T T F F F F T T T T F F F F F F
+testEx97 lowToMid F T T F T T T F F F T T F T F F F F F F
+testEx98 lowToMid T T T T F T F F F F T T F T F F F F F F
+testEx99 midToHigh F T F F F F T T F F F F T T T T F T T T
+testEx100 midToHigh F F F T F F F F F F T F F T F F F T T T
+testEx101 midToHigh F T T F F F F T F F F F T T T T F T T T
+testEx102 lowToMid F T F T F T F F F F T T F T T T T F F F
+testEx103 midToHigh F F F T F F T F F F T F T T T T F T T F
+testEx104 lowToMid F T T F F T F F F F T T T T F F F F F F
+testEx105 midToHigh F T F T F T T F F F T T T T T F F F F F
+testEx106 midToHigh F F F T F F F F F F T F T T T F F T T T
+testEx107 lowToMid F T F T T T T T F F T T T T T T F T F F
+testEx108 midToHigh F T F T F T F F F F F F F T T T F T T T
+testEx109 midToHigh F F F T F T F F F F T T F T F F F T F F
+testEx110 midToHigh F T F T T T F F F F T T F F F F F T T F
+testEx111 lowToMid F T T F F T F F F F T T T F F F F F F F
+testEx112 midToHigh F T F T F F T F F F T T F T T T F T F F
+testEx113 midToHigh F F F T F F F F F F T F T T T F F T T F
+testEx114 midToHigh F F F T F T T T F F T T F T T T F T F F
+testEx115 midToHigh F T F T T T F F F F T T T T T F F T F F
+testEx116 lowToMid T T T T T T F F F F T T F T T T T T F F
+testEx117 lowToMid F T T F F T T F F F T T T T F F F F F F
+testEx118 midToHigh F F F T T F F F F F T F F T T T F T T T
+testEx119 midToHigh F F F T F T T F F F T T T T T T F T T F
+testEx120 lowToMid F T T F F T F F F F T F F T F F F T F F
+testEx121 lowToMid F T F F F F F F F F T F T F F F F F F F
+testEx122 lowToMid F T T F F T F F F F T T F T F F F F F F
+testEx123 lowToMid F F F F F F T F F F T T T T F F F T F F
+testEx124 midToHigh F F F T F T F F F F T T T T F F F T F F
+testEx125 midToHigh T T F T F T F F F F T T F T T T F T T F
+testEx126 lowToMid F T T F F T F F F F T T T T T T F F F F
+testEx127 lowToMid F T F F T T T T F F T T F T F F F F F F
+testEx128 midToHigh F F F T F F F F F F T T F T T T F T F F
+testEx129 lowToMid F T T F T T T F F F T T F T T F F F F F
+testEx130 midToHigh F T T F F T F F F F T T T T F F F T T F
+testEx131 midToHigh F T F F F T T F F F T F T T T F F T T F
+testEx132 lowToMid F T T F F T T F F F T T T T F F F F F F
+testEx133 midToHigh F T F F T T F F F F T T F F F F F F F F
+testEx134 lowToMid F T T F T T T F F F T T F T T T F F F F
+testEx135 midToHigh T F F T T T T F F F T T F T T T F T T F
+testEx136 lowToMid F T T F T T F F F F T T F T T F F F F F
+testEx137 midToHigh F T T F F F T F F F T F T T F F F T T T
+testEx138 lowToMid F F F T F F T F F F T F T T T F F T T F
+testEx139 midToHigh T F F T F F F F F F T T F T T T F T F F
+testEx140 lowToMid F T T F F T T T F F T T T T F F F F F F
+testEx141 midToHigh T F F T T T F F F F T T F T T T F T T F
+testEx142 midToHigh F T T F F F T F F F T T T T T T F F F F
+testEx143 lowToMid F T T F T F F F F F T F T F F F F T T T
+testEx144 midToHigh F F F T F T F F F F T T F T T T F T T F
+testEx145 lowToMid F T T F F T F F F F T F F F F F F T F F
+testEx146 lowToMid F T T F T T F T F F T T F T F F F F F F
+testEx147 midToHigh T T F T T T T F F F T T F T T T F T F F
+testEx148 lowToMid T T F T F T T F F F T T F T T T F T T F
+testEx149 midToHigh T T F T F T F F F F T T F T T F F T T F
+testEx150 midToHigh F F F T F T F F F F T F T T T T F T T T
+testEx151 lowToMid F T T T F T T T T F T T F T F F F F F F
+testEx152 midToHigh F F F F F T F F F F T T T T T T F T F F
+testEx153 midToHigh F T T F F T T F F F T T T T T F F T F F
+testEx154 midToHigh T T F T F F F F F F T T F T T T F T T F
+testEx155 midToHigh F F F T F T F F F F T T F F F F F F F F
+testEx156 lowToMid F F F T F T F T F F T F T T F F F F F F
+testEx157 lowToMid F T T F T T T F F F T T F F F F F F F F
+testEx158 midToHigh F T F F F T T F F F T T T T T F F F F F
+testEx159 lowToMid F T T F F T T T T F T T F T F F F F F F
+testEx160 midToHigh F T T F F T F F F F T T T T T T F T F F
+testEx161 lowToMid F T T F F F T F F F T F T T T F F T T F
+testEx162 midToHigh F T F T T T F F F F T T F T F F F T T T
+testEx163 lowToMid T F F T T T F F F F T T F T F F F T F F
+testEx164 lowToMid F T T F F F F F F F T T T T T F F T F F
+testEx165 lowToMid F T T F T T F F F F T T T T T F F F F F
+testEx166 lowToMid F T F T F T F F F F T T F F F F F T F F
+testEx167 lowToMid F T T F F T F F F F T T F T F F F F F F
+testEx168 midToHigh F T T F F T T F F F T T T T T T F T F F
+testEx169 midToHigh T F F T T T F F F F T T F T T T F F F F
+testEx170 midToHigh F F F F F F T F F F F F T T T T F T T T
+testEx171 midToHigh F T F F F F F F F F T F T T T T F T T T
+testEx172 lowToMid T T T F T T F T F F T T T T T F F T T F
+testEx173 midToHigh T T F T F T F F F F T T F T T T F T T T
+testEx174 lowToMid F T F T F T T F F F T T F T T T T F F F
+testEx175 lowToMid F T T F F T T T F F T T T T F F F F F F
+testEx176 lowToMid F F F T F T F F F F T T F T T T F F F F
+testEx177 lowToMid F T T T F T T F F F T T F T T T T F F F
+testEx178 lowToMid F F F T F T F F F F T T F T T F F F F F
+testEx179 midToHigh T F F F F T F F F F T F F T T T F T T T
+testEx180 midToHigh F T T F F F T F F F T F T T T T F T T F
+testEx181 lowToMid T T F T F T T T F F T T F T T T F F F F
+testEx182 midToHigh T T F T F T F F F F T T F T T T F T T F
+testEx183 midToHigh T T F T T T F F F F T T F T T T F T T T
+testEx184 lowToMid F T T T F T T F F F T T T T F F F F F F
+testEx185 midToHigh T T F T T T T T F F T T F T T T F F F F
+testEx186 lowToMid F T T F F F T F F F T F T T T T F T T F
+testEx187 lowToMid F T F T F T F F F F T T F T T T T F F F
+testEx188 lowToMid F T F F F T F F F F T T F T T T F F F F
+testEx189 midToHigh F T F T F T T F F F T T F T T T F T T F
+testEx190 midToHigh T T T T F T F F F F T T F T T T F F F F
+testEx191 lowToMid F T T F F T F F F F T F T F F F F T F F
+testEx192 midToHigh F T F T F F F F F F T F F T T T F T T F
+testEx193 lowToMid F T T F F F F F F F T F T F F F F T T T
+testEx194 lowToMid F T T F T T F F F F T T T T T T F T F F
+testEx195 lowToMid F T T F F T F F F F T T T T F F F F F F
+testEx196 midToHigh F T F F F F T F F F F F T T T T F T T T
+testEx197 lowToMid F T T F T T T T T F T T T F F F F F F F
+testEx198 midToHigh F T F T F T T F F F T T F T T T F T T F
+testEx199 lowToMid F T T F F F T F F F T F T F F F F T T T
+testEx200 lowToMid F T T F F T F F F F T T F F F F F F F F
+testEx201 lowToMid F T T F F T F F F F T T T T T F F T F F
+testEx202 midToHigh F T F F F T T F F F T F T T T T F T F F
+testEx203 midToHigh F T T F T T F F F F T F T T T F F T T F
+testEx204 lowToMid T T F T T T T F F F T T F T T F F F F F
+testEx205 lowToMid F T F T F T F F F F T T F T F F F T F F
+testEx206 lowToMid F T T F T T F F F F T T T F F F F F F F
+testEx207 midToHigh T T T F T T T F F F T T F T T F F T F F
+testEx208 midToHigh F F F T F F T T F F F F F F F F F T T T
+testEx209 midToHigh F T F F F T F F F F T T F T T F F F F F
+testEx210 midToHigh F T F F T T F F F F T T F T T T F T F F
+testEx211 midToHigh T F F T F F F F F F T T F T T T F T T F
+testEx212 lowToMid F T T F F T F F F F T T F F F F F F F F
+testEx213 lowToMid F T F F F T T F F F T T T T F F F F F F
+testEx214 midToHigh F F F T F T F F F F T F F T T F F T T F
+testEx215 lowToMid F T T F F T T T T F T T F T T T T F F F
+testEx216 lowToMid F T T F F T T T F F T T F T F F F F F F
+testEx217 midToHigh T T F T T T F F F F T T F T T T F F F F
+testEx218 lowToMid T F F T T T F F F F T T F T T F F F F F
+testEx219 midToHigh T F F T F F F F F F T T F T T F F T F F
+testEx220 lowToMid F T F T F T F F F F T T T T T T F T F F
+testEx221 lowToMid F T F T F T F F F F T T F T T T F F F F
+testEx222 midToHigh F F F T F F F F F F T T T T F F F F F F
+testEx223 midToHigh F F F T F F F F F F T F F T F F F T T F
+testEx224 midToHigh T F F T T F F F F F T T F T T T F T T T
+testEx225 lowToMid F T F T T T F T F F T T T T T T F T F F
+testEx226 midToHigh F T T F F T T T F F T T T T F F F F F F
+testEx227 midToHigh F T F F F T F F F F T T T T F F F F F F
+testEx228 lowToMid F T T F F T F F F F T T F F F F F T F F
+testEx229 midToHigh F F F T F F T F F F T F T T F F F T T T
+testEx230 midToHigh T T F T F T F F F F T T F T T T F T T T
+testEx231 lowToMid F T F T T T F F F F T T F T F F F T T F
+testEx232 lowToMid F T T F F F F F F F T T T F F F F T F F
+testEx233 lowToMid T T F T F T F F F F T T F F F F F F F F
+testEx234 midToHigh F T T F F T F F F F T F T T F F F T T F
+testEx235 lowToMid F T T F F T F F F F T T F T F F F F F F
+testEx236 midToHigh F T F F F T T F F F T F T T T F F T T F
+testEx237 midToHigh F T F T T T T F F F T T F T F F F T F F
+testEx238 lowToMid F T T F F F F F F F T T T T T T F F F F
+testEx239 midToHigh F T F F T T F F F F T T F T T T F T F F
+testEx240 midToHigh F T T F F T T F F F T F T T F F F T T F
+testEx241 midToHigh F T T F F T F F F F T T T T F F F F F F
+testEx242 midToHigh F T T F T T F F F F T T F T T F F F F F
+testEx243 lowToMid F T F F F T F F F F T T T F F F F F F F
+testEx244 midToHigh F T T F F F F F F F T T T T T T F F F F
+testEx245 lowToMid F T T T F T T T T F T T F T F F F F F F
+testEx246 lowToMid F T T F F T F F F F T T T F F F F F F F
+testEx247 lowToMid F T T F T F F F F F T F F F F F F T T T
+testEx248 midToHigh F F F T F F F F F F T T T T T T F T T T
+testEx249 lowToMid F T T T T T T T T F T T F T T T T F F F
+testEx250 lowToMid F T T F F T F F F F T T F T T T T F F F
+testEx251 lowToMid F T T F F T T T F F T T F T T T F F F F
+testEx252 midToHigh F F F T F T T F F F T F F T T T F T T T
+testEx253 midToHigh F F F F F T T F F F T T T T T T F T T F
+testEx254 midToHigh F T F T F T F F F F T F F T T T F T F F
+testEx255 lowToMid F T F T T T T T F F T T T T T T F T F F
+testEx256 lowToMid F F F T F T T F F F T T F T T T F T T F
+testEx257 lowToMid T T F T T T T T F F T T F T T T F T F F
+testEx258 midToHigh T T F T T T F F F F T T F T T T F T T T
+testEx259 lowToMid F T T T F T F T F F T T F T F F F F F F
+testEx260 lowToMid F T T F F T F F F F T F T T T F F F F F
+testEx261 midToHigh F T T F T T T F F F T T T T T T F F F F
+testEx262 lowToMid T F F T F T T T F F T T F F F F F F F F
+testEx263 midToHigh F F F T T T F F F F T T F T T T T T F F
+testEx264 midToHigh F T F T T F F F F F T F F F F F F T T F
+testEx265 lowToMid F T F F T F F F F F T T T T F F F F F F
+testEx266 midToHigh T F F T F T F F F F T T F T T T F F F F
+testEx267 midToHigh F T F T T T T F F F T T T T T T F T F F
+testEx268 midToHigh F F F T F T T F F F T T T T T F F F F F
+testEx269 midToHigh F T F T F F T F F F T F F T T T F T T F
+testEx270 midToHigh T F F T F T F F F F T T F T T T F T T F
+testEx271 midToHigh T F F T T T F F F F T T F T T T F T F F
+testEx272 midToHigh F T F F F T F F F F T T T T T T F F F F
+testEx273 midToHigh F F F T F T T F F F T T T T T T F T T F
+testEx274 midToHigh F F F F F F T T F F F F F F F F F T T T
+testEx275 midToHigh F T T F F T F F F F T T T T T T F T T F
+testEx276 lowToMid F T T F F T F F F F T F T F F F F T F F
+testEx277 midToHigh F T F F F F T F F F T F T T T T F T F F
+testEx278 midToHigh F T F T F T F F F F T T F T F F F T F F
+testEx279 midToHigh T F F T F T F F F F T T F T T T F F F F
+testEx280 lowToMid F T F T T T T T T F T T T T T F F F F F
+testEx281 midToHigh F F F T F F T F F F T F F T T T F T T F
+testEx282 midToHigh F T T F F T F F F F T T F T T F F F F F
+testEx283 midToHigh F F F T F T F F F F T F T T T T F T T T
+testEx284 midToHigh F F F F F F F F F F F F T T F F F T T T
+testEx285 lowToMid F T T T F T T T F F T T F T T F F T F F
+testEx286 midToHigh F T F T T T T F F F T F F T T T F T T T
+testEx287 midToHigh F F F T F T T F F F T F T T T T F T T T
+testEx288 lowToMid F F F F F T T F F F T T T F F F F F F F
+testEx289 midToHigh T F F T T T F F F F T T F T T T F T T F
+testEx290 midToHigh F T F F F T T F F F T T T F F F F T F F
+testEx291 midToHigh F T F F F F F F F F T T T T T F F T T T
+testEx292 lowToMid F T T F T T F F F F T T F T F F F T F F
+testEx293 lowToMid F T F T T T T T T F T T T T T T F T F F
+testEx294 midToHigh T T F T F T F F F F T T F T T T F T T T
+testEx295 midToHigh F T F F T T F F F F T T T T T T F T T F
+testEx296 midToHigh F T F F F T F F F F T T F T T F F F F F
+testEx297 lowToMid F T T F F T T T F F T T T F F F F F F F
+testEx298 lowToMid T T F T F T F F F F T T F F F F F F F F

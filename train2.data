@@ -1,0 +1,150 @@
+// The structure of a dataset will be as described below.
+// (we're using a very restricted design for simplicity).
+
+// You can visit
+//    http://archive.ics.uci.edu/ml/datasets/Congressional+Voting+Records
+// to see more about this dataset.
+
+// NOTE: Your code should handle both Windows-formatted and Linux-formatted files
+// (which, unfortunately, differ in how the end of line is represented).
+
+// The number of features:
+16
+
+// The names of the features (16 key US Congressional bills from 1984,
+// the possible feature values are "voted for [y] or against [n]")
+handicapped-infants 	       	-      y n
+water-project-cost-sharing	   	-      y n
+adoption-of-the-budget-resolution  	-      y n
+physician-fee-freeze		   	-      y n
+el-salvador-aid		           	-      y n
+religious-groups-in-schools		-      y n
+anti-satellite-test-ban			-      y n
+aid-to-nicaraguan-contras		-      y n
+mx-missle				      -      y n
+immigration				      -      y n
+synthfuels-corporation-cutback	-      y n
+education-spending			-      y n
+superfund-right-to-sue			-      y n
+crime					      -      y n
+duty-free-exports			      -      y n
+export-administration-act-south-africa -   y n
+
+// The class labels (we assume, for simplicity, that only TWO values are possible):
+democrat
+republican
+
+
+// The number of examples (will read this many in; ok to have more in the file)
+100
+
+// The examples (we assume, for simplicity, that all features are BOOLEAN-VALUED)
+//   First is the example's name, then its category, finally followed
+//   by the values of all of its features (listed in the order of the
+//   feature names above, will be separated by "whitespace"). 
+//   The (boring) names are simply used to concisely identify the examples.
+//   Your decision-tree learner should NOT use these names as a feature (what would happen if you did?).
+
+// You may assume that "y" and "n" (stored as STRINGs by the provided code)
+// are the only valid feature values.
+
+trainEx1  democrat     n y y n y y n n n n n n y y y y
+trainEx2  republican   n y n y y y n n n n n y y y n y
+trainEx3  democrat     y y y n n n y y y n y n n n y y
+trainEx4  democrat     y y y n n n y y y n n n n n y y
+trainEx5  democrat     y n y n n n y y y y n n n n y y
+trainEx6  democrat     y n y n n n y y y n y n n n y y
+trainEx7  democrat     y y y n n n y y y n y n n n y y
+trainEx8  republican   y n n y y n y y y n n y y y n y
+trainEx9  democrat     y y y n n n y y y n y n n n y y
+trainEx10 republican   n y n y y y n n n n n y y y n n
+trainEx11 democrat     y n y n n y y y y y y n n n y y
+trainEx12 democrat     y y y n n n y y y y n n y n y y
+trainEx13 republican   n y n y y y n n n n n y y y n y
+trainEx14 democrat     y y y n n n y y y n n n n n y y
+trainEx15 republican   n y n y y y n n n n n y y y n n
+trainEx16 republican   y y n y y y n n n n n n y y n y
+trainEx17 republican   n y n y y y n n n y n y y y n n
+trainEx18 democrat     y n y n n n y y y y y n y n y y
+trainEx19 democrat     y n y n n n y y y n n n n n n y
+trainEx20 democrat     y n y n n n y y y n n n n n y y
+trainEx21 democrat     y y y n n n y y y n n n n n n y
+trainEx22 democrat     y y y n n n y y n n n n n y n y
+trainEx23 democrat     y y y n n n y y y n y n n n y y
+trainEx24 republican   y y n y y y n n n y n y y y n n
+trainEx25 republican   n y n y y y n n n y y y y y n n
+trainEx26 republican   n y n y y y n n n y y y y y n y
+trainEx27 republican   n y n y y y n n n y n y y y n y
+trainEx28 republican   n y n y y y n n n y n y y y n y
+trainEx29 republican   n y n y y y n n n n n y y y n n
+trainEx30 democrat     y y y n n n y y y n y n n n n y
+trainEx31 republican   y y n y y y y n n n n y y y n y
+trainEx32 republican   n y n y y y y n n n y y y y n y
+trainEx33 republican   n y n y y y n n n y n y y y n n
+trainEx34 democrat     y y y n n n y y y n n n n n y y
+trainEx35 republican   y y y y n n y y y y y n n y n y
+trainEx36 republican   y n y y y n y n y y n n y y n y
+trainEx37 democrat     y n y n n y y y y y y n n y y y
+trainEx38 democrat     n y y y y y n n n y y n y y n n
+trainEx39 democrat     n y y y y y n y y y y y y y n y
+trainEx40 democrat     y y y n y y n n n y y n y y n y
+trainEx41 republican   n n n y y n n n n y n y y y n n
+trainEx42 republican   n n n y y y n n n y n y y y n y
+trainEx43 republican   n n n y y y n n n n n y y y n n
+trainEx44 democrat     n n y n y y n n n y y y y y n y
+trainEx45 republican   n n n y y y n n n y n y y y n n
+trainEx46 republican   n n n y y y n n n n n y y y n n
+trainEx47 democrat     n y y n y y y n y y y n y y n y
+trainEx48 democrat     y n y n n n y y y y n n n n y y
+trainEx49 democrat     y n y n n n y y y y y n n n y y
+trainEx50 democrat     y n y n n n y n y y y n n n y y
+trainEx51 democrat     y n y n y y n n n n n n n n n y
+trainEx52 democrat     y n n n y y y n n y y n n y n y
+trainEx53 democrat     y y y n n y y y y y n n n n n y
+trainEx54 democrat     y n n n y y n n n n y y n y n y
+trainEx55 democrat     y n y n y y y n n n y n n y n y
+trainEx56 democrat     y y y n n n n y y n y n n n y y
+trainEx57 republican   n y n y y y n n n n n y y y n y
+trainEx58 democrat     n n y n n n y y y y n n n n y y
+trainEx59 democrat     y n y n n n y y y n y n n n y y
+trainEx60 republican   y y y y y n y n n n n y y y n y
+trainEx61 democrat     n y y n n n n y y y y n n n y y
+trainEx62 republican   n n n y y y n n n n n y y y n n
+trainEx63 republican   n n n y y y n n n y n y n y n y
+trainEx64 democrat     n n y n n y n y y y n n n y n y
+trainEx65 republican   n n n y y y n n n y n y y y n y
+trainEx66 republican   n n n y y y n n n y n y y y n n
+trainEx67 republican   n y n y y y n n n y y y y n n y
+trainEx68 democrat     n n y n n y y y y y n n n y n y
+trainEx69 democrat     y n y n n y y y y n n n n n y y
+trainEx70 republican   n n n y n n y y y y n n y y n y
+trainEx71 republican   n n n y y y y y y y n y y y n y
+trainEx72 republican   n y n y y y n n n n n y y y n y
+trainEx73 democrat     n n n n n n y y y y n y y y y y
+trainEx74 republican   n y n y y y n n n y y y y y n y
+trainEx75 democrat     n n y n n n y y y y n n y n y y
+trainEx76 republican   y y n y y y n n n y n y y y n y
+trainEx77 democrat     n y y n n y n y y y y n y n y y
+trainEx78 democrat     n n y n n y y y y y y n y y n y
+trainEx79 republican   n y n y y y n n n n n y y y n n
+trainEx80 republican   y y n y y y y n n n n y y y n n
+trainEx81 republican   n y n y y y n n n y n y y y n n
+trainEx82 democrat     n y n n y y n n n n n y y y y y
+trainEx83 democrat     n n n n y y y n n n n y y y n y
+trainEx84 democrat     n y y n y y y n n n y y y y n y
+trainEx85 republican   n y n y y y y n n n n y y y n y
+trainEx86 republican   y n y y y y y y n y n y n y y y
+trainEx87 republican   y n y y y y y y n y y y n y y y
+trainEx88 democrat     y n y n n n y y y y y n n y n y
+trainEx89 democrat     n n n n y y n n n y y y y y n y
+trainEx90 democrat     n y y n n n y y y y n n n n y y
+trainEx91 republican   n n y y n n y y y y n n n y y y
+trainEx92 democrat     y n y n n n y y y y n n n n y y
+trainEx93 democrat     n n y n n n y y y y y n n n y y
+trainEx94 democrat     n n y n n n y y y y y n n n y y
+trainEx95 democrat     n y y n n n y y y y y n n n y y
+trainEx96 republican   n y y y y y y n y y n y y y n y
+trainEx97 republican   n y n y y y n n n n n y y y n y
+trainEx98 republican   n y n y y y n n y y n y y y n y
+trainEx99 republican   n y n y y y n n n y n y y y n y
+trainEx100 republican  n n n y y y n n n y n y n y n y

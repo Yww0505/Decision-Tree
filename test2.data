@@ -1,0 +1,132 @@
+// The structure of a dataset is illustrated by what follows.
+// See  train-house-votes-1984.data for more annotation.
+
+// The number of features:
+16
+
+// The names of the features:
+handicapped-infants 	       	- y n
+water-project-cost-sharing		- y n
+adoption-of-the-budget-resolution	- y n
+physician-fee-freeze			- y n
+el-salvador-aid				- y n
+religious-groups-in-schools		- y n
+anti-satellite-test-ban			- y n
+aid-to-nicaraguan-contras		- y n
+mx-missle				      - y n
+immigration				      - y n
+synthfuels-corporation-cutback	- y n
+education-spending			- y n
+superfund-right-to-sue			- y n
+crime					      - y n
+duty-free-exports			      - y n
+export-administration-act-south-africa - y n
+
+// The class labels:
+democrat
+republican
+
+// The number of examples (will read this many in; ok to have more in the file)
+100
+
+// The examples:
+testEx1  democrat    n n y n n n y y y n y n n n y y
+testEx2  democrat    n y y n n y n y y n y n y n y y
+testEx3  republican  y y n y y y n n n y n y y y n y
+testEx4  republican  n y n y y y n n n y n y y y n n
+testEx5  democrat    n y y n n n n y y n y n n y y y
+testEx6  republican  n n n y y n n n n n n y y y n y
+testEx7  democrat    n n y n n y y y y n y n n y y y
+testEx8  democrat    y n y n n n y y y n n n n n y y
+testEx9  democrat    n n n n n y y y y n y n n y y y
+testEx10 democrat    n n y n n n y y y n n n n n y y
+testEx11 democrat    n n y n n n y y y n n n n y y y
+testEx12 democrat    y y y n n n y y y n n n n n y y
+testEx13 democrat    n n y n n n y y y n n n n n y y
+testEx14 democrat    y n y n n y y y n n n y y n n y
+testEx15 republican  n n n y y y y n n y n n n y y y
+testEx16 democrat    y n y n n n y y y y y n n y y y
+testEx17 democrat    y n y n n n n y y y n n n n y y
+testEx18 democrat    y n y n n n y y y y y n n n y y
+testEx19 republican  n y n y y y n n n n n y y y n n
+testEx20 republican  n y n y y y n n n n n y y y n n
+testEx21 democrat    y y y n n y y y y n n n n n y y
+testEx22 republican  n y n y y y n n n n n y y y n y
+testEx23 democrat    y n y n n n y y y y n n n n n y
+testEx24 democrat    y n y n n n y y y y n n n y y y
+testEx25 republican  n n n y y n n n n n n y n y n n
+testEx26 democrat    n n y n n n y y y n y n n n y y
+testEx27 democrat    y n y n n n y y y n n n n n n y
+testEx28 democrat    y n y n n n y y y y n n n n n y
+testEx29 democrat    y n y n n n y y y y n n n n n y
+testEx30 republican  n n n y y y n n n y n y n y n y
+testEx31 republican  y n n n n n y y y y n n n y n y
+testEx32 democrat    y n y n n n y y y n n n n n n y
+testEx33 democrat    y y y n n n y y y n n n n n y y
+testEx34 republican  y n n y y n y n n y n n n y y y
+testEx35 republican  n n n y y y n n n n n y y y y n
+testEx36 republican  n n y y y y y y n y n n n y n y
+testEx37 republican  n n n y y y n n n n n y y y n y
+testEx38 republican  n n n y y y n n n y n y y y n n
+testEx39 democrat    n n y n n n y y y y n n n y n y
+testEx40 republican  n n n y y y n n n n n y y y n y
+testEx41 democrat    n n y n n y y y y y y n n n y y
+testEx42 democrat    y y y n y y n y n y y n y y y y
+testEx43 democrat    y n y n n y y y n y y n y y y y
+testEx44 democrat    y y y n n y y y y y y n y y y y
+testEx45 republican  n n y y y y n n n y n y y y y y
+testEx46 democrat    n y n n n n y y y y y n n n y y
+testEx47 democrat    n y y n n y y y y y n n y y y y
+testEx48 republican  n n n y y n y y y y n y y y n y
+testEx49 republican  n n n y y y y n n y n y y y n y
+testEx50 republican  n n n y y y n n n n n y y y n n
+testEx51 republican  n n n y y y n n n y n y y y n n
+testEx52 republican  n n n y y y n n n n n y y y n n
+testEx53 republican  n n n y y y n n n y n y y y n n
+testEx54 democrat    y n n n n y y y y y n n n y y y
+testEx55 republican  n n n y y y n n n y n y y y y n
+testEx56 democrat    n n y n n y y y y y n n y n n y
+testEx57 democrat    y y y n n n y y y y n n n n y y
+testEx58 republican  n y y y y y n n n y n y y y n y
+testEx59 republican  n y n y y y y y n n y y y y y y
+testEx60 democrat    n n n n n y n y y n y y y y y n
+testEx61 democrat    y n n n n n y y y y n n n n y y
+testEx62 democrat    n y y n n y n y y y n n y y n y
+testEx63 democrat    y y y n n n y y y y n n y n n y
+testEx64 republican  n y n y y y n n n n y y y y n n
+testEx65 democrat    y y n y n n y y y n y n n y n y
+testEx66 republican  n y n y y y n n n n n y y y n y
+testEx67 democrat    y y y n n n y y y n y n n n n y
+testEx68 republican  n y n y y y n n n y n y y y n n
+testEx69 democrat    n n y n n n y y y n n n n n y y
+testEx70 democrat    y n y n n n y y y n n n n n y y
+testEx71 democrat    y n y n n n y y y y n n n y y y
+testEx72 republican  y n n y y y n n n n y y y y n n
+testEx73 republican  n n n y y y n n n y y y n y n y
+testEx74 republican  n n n y y n y n y y n n n y n y
+testEx75 democrat    n n y n n n y y y y y n n n y y
+testEx76 republican  n n n y y y y n n y n y n y y y
+testEx77 republican  n n n y y y n n n y n y y y n y
+testEx78 republican  y n n y y y n n n y n y y y n n
+testEx79 republican  n y y y y y y y y n n y y y n y
+testEx80 democrat    n y n n n y y n y n y n n n y y
+testEx81 republican  n n y y y y y y y y n y y y y y
+testEx82 republican  n n y y y y y n n y y y y y n y
+testEx83 republican  y n y y n n n y y y n n n y y y
+testEx84 republican  n n n y y y n n n n n y y y n n
+testEx85 republican  n n n y y y n n n n n y y y n n
+testEx86 democrat    y n y n n y y y y y n n y n n y
+testEx87 democrat    y y y n n y y y y y y y y n n y
+testEx88 republican  y y n y y y n n n y y n y n n n
+testEx89 republican  y y n y y y n n n n y n y y n y
+testEx90 democrat    n y n n y y n n n y y n y y n n
+testEx91 democrat    n y y n n y y y n y n n n n y y
+testEx92 republican  n y n y y y n n n n n n y y n y
+testEx93 republican  n y n y y y n n n n n y y y n y
+testEx94 democrat    n y n y y y n n n n y y n y n n
+testEx95 republican  n n n y y y n n n n n y y y n y
+testEx96 republican  n n n y y y n n n n n y y y n y
+testEx97 democrat    y y y n y y n y y y y n n n n y
+testEx98 democrat    y y y y y y n n n n y y y y n y
+testEx99 democrat    y y n n y y n n n n y y y y y n
+testEx100 democrat   y y n n n n n y y n y n n n y n
